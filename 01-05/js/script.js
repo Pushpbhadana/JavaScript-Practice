@@ -1,5 +1,5 @@
 const x = "red";
-x = "light blue";
+
 
 function change_to_blue() {
     let inside_x = "blue";

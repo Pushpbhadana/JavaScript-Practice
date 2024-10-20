@@ -8,6 +8,4 @@ function change_to_blue() {
 }
 change_to_blue();
 
-console.log("Inside function data: " + inside_x);
-
 console.log(x);

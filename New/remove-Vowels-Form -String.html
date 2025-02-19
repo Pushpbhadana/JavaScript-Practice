@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>bootstrap</title>
+
+</head>
+<body  data-bs-theme="light">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <form id="rmvVowle">
+            
+                        <label  class="form-label form-text " for="istr">
+                            Enter string to remove vowels here...
+                        </label>
+                        <input type="text" class="form-control" id="istr">
+                   
+                        <button type="submit" class="btn btn-primary mt-3">Convert</button>
+
+                        <div class="m-3">
+                            <div class="h4">
+                                output: <span id="osrt"></span>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    
+    <script>
+        let istr = document.getElementById("istr");
+        const form = document.getElementById('rmvVowle');
+        const osrt = document.getElementById('osrt');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get input value and remove vowels
+            const result = istr.value.replace(/[aeiou]/gi, '');
+            
+            // Display result in output span
+            osrt.textContent = result;
+        });
+    </script>
+</body>
+</html>
